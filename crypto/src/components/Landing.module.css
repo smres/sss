@@ -1,0 +1,132 @@
+.coinContainer {
+  margin: 50px auto;
+  border: 1px solid silver;
+  border-radius: 10px;
+  width: fit-content;
+  background-color: #f6f6f6;
+}
+
+/* .input {
+  width: 300px;
+  margin-top: 50px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  height: 20px;
+  padding: 5px;
+  background-color: #f6f6f6;
+  transition: all 0.2s ease;
+} */
+
+.input:focus {
+  outline: none;
+  border-color: white;
+  background: white;
+  box-shadow: rgba(74, 74, 74, 0.24) 0px 3px 8px;
+}
+
+/* ======== */
+.lab_input {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.lab_input > input {
+  -webkit-appearance: none;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0 32px 0 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  color: #000;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.lab_input > input:focus {
+  border: 2px solid #19805c;
+}
+
+.btn_clear {
+  position: absolute;
+  top: 8px;
+  right: 23rem;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  font-size: 16px;
+  transition: none !important;
+  z-index: 1;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_clear {
+    right: 13rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .btn_clear {
+    right: 6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btn_clear {
+    right: 4rem;
+  }
+}
+
+.text_input:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0px;
+  left: 14px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 4px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.24);
+  background: #fff0;
+  transition: all 0.3s ease, background 0.1s 0.1s;
+}
+
+.lab_input > input:focus ~ .text_input:after {
+  top: -8px;
+  height: 16px;
+  font-size: 12px;
+  color: #19805c;
+  background: #fff;
+}
+
+.lab_input > input:valid ~ .text_input:after {
+  top: -8px;
+  height: 16px;
+  font-size: 12px;
+  background: #fff;
+}
+
+input:focus ~ .btn_clear {
+  z-index: 1;
+}
+
+input:not(:focus) ~ .btn_clear:active {
+  z-index: 1;
+}
+
+input:not(:focus) ~ .btn_clear {
+  z-index: -1;
+}
