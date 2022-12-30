@@ -18,6 +18,7 @@ const Coin = ({ name, image, symbol, price, marketCap, priceChange }) => {
         {Number(priceChange).toFixed(2)}
       </span>
       <span className={styles.marketCap}>$ {marketCap.toLocaleString()}</span>
+      <span>ss</span>
     </div>
   );
 };
